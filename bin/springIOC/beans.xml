@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="SubClassQ1" class="springIOC.SubClassQ1"></bean>
+	<bean id="SubClassQ2" class="springIOC.SubClassQ2"></bean>
+	<bean id="MainService" class="springIOC.MainService">
+		<property name="MainInterface">
+			<ref local="SubClassQ1" />
+		</property>
+	</bean>
+</beans>
